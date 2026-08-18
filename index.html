@@ -1,37 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BugFalse</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BugFalse ErrorHunter — an AI-powered developer tool for analyzing Python code, understanding errors, and generating fixes.">
+  <meta name="theme-color" content="#090b10">
+  <meta property="og:title" content="BugFalse — ErrorHunter">
+  <meta property="og:description" content="Turn confusing Python errors into actionable fixes.">
+  <meta property="og:type" content="website">
+  <title>BugFalse — ErrorHunter</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <iframe
-        src="https://buglens-r1ow.onrender.com/"
-        title="ErrorHunter"
-        allowfullscreen>
-    </iframe>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="BugFalse home">
+      <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+      <span>Bug<span>False</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#features">Capabilities</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">☾</button>
+      <button class="button button-small button-primary" id="launch-top" type="button">Launch ErrorHunter</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="status-dot"></span> Developer debugging workspace</div>
+        <h1>Turn confusing errors into <em>actionable fixes.</em></h1>
+        <p class="hero-copy">BugFalse ErrorHunter helps you analyze Python code, understand failures, generate corrected code, and surface practical improvements through an AI-assisted workflow.</p>
+        <div class="hero-actions">
+          <button class="button button-primary button-large" id="launch-hero" type="button">Launch ErrorHunter <span aria-hidden="true">→</span></button>
+          <a class="button button-ghost button-large" href="#workflow">Explore workflow</a>
+        </div>
+        <div class="hero-note"><span aria-hidden="true">⌁</span> Built around the existing ErrorHunter application — no mock functionality.</div>
+      </div>
+      <div class="preview" aria-label="Product preview">
+        <div class="window-bar"><span></span><span></span><span></span><strong>ErrorHunter</strong><small>AI debugging workspace</small></div>
+        <div class="preview-body">
+          <div class="preview-editor"><div class="line-numbers">01<br>02<br>03<br>04<br>05<br>06</div><pre><span class="kw">def</span> calculate(a, b):
+    result = a + b
+    <span class="kw">return</span> result
+
+<span class="fn">print</span>(calculate(10, 20))</pre></div>
+          <div class="preview-result"><div class="result-label"><span class="severity"></span> Analysis</div><strong>Code looks ready to run</strong><p>Review the generated explanation and improvement suggestions in ErrorHunter.</p><div class="mini-tags"><span>Analysis</span><span>Fix</span><span>Improvements</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading"><div class="eyebrow">CAPABILITIES</div><h2>From source code to a clearer next step.</h2><p>The product experience is centered on the debugging task rather than decorative dashboards or invented metrics.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">01</span><h3>Analyze</h3><p>Submit Python source code to the ErrorHunter analysis workflow.</p></article>
+        <article class="feature-card"><span class="feature-icon">02</span><h3>Understand</h3><p>Get structured explanations that make the underlying problem easier to reason about.</p></article>
+        <article class="feature-card"><span class="feature-icon">03</span><h3>Fix</h3><p>Review AI-generated corrected code and practical improvement suggestions.</p></article>
+        <article class="feature-card"><span class="feature-icon">04</span><h3>Build confidence</h3><p>Use the analysis as a developer aid while keeping the final decision in your hands.</p></article>
+      </div>
+    </section>
+
+    <section class="workflow section" id="workflow">
+      <div class="section-heading"><div class="eyebrow">WORKFLOW</div><h2>A focused debugging loop.</h2></div>
+      <div class="steps">
+        <div class="step"><b>01</b><span>Detect</span><p>Submit the Python code you want to inspect.</p></div>
+        <div class="step"><b>02</b><span>Understand</span><p>Read the identified issues and their explanations.</p></div>
+        <div class="step"><b>03</b><span>Diagnose</span><p>Use the analysis to trace the likely root cause.</p></div>
+        <div class="step"><b>04</b><span>Fix</span><p>Review the suggested corrected code.</p></div>
+        <div class="step"><b>05</b><span>Verify</span><p>Validate the change yourself before using it.</p></div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div><div class="eyebrow">ENGINEERING PRINCIPLES</div><h2>Useful first. Honest always.</h2></div>
+      <div class="principles"><div><strong>Clarity</strong><span>Prioritize understandable debugging feedback.</span></div><div><strong>Developer experience</strong><span>Keep the path from code to diagnosis short.</span></div><div><strong>Privacy</strong><span>Never place application secrets in this public frontend.</span></div><div><strong>Reliability</strong><span>Handle unavailable backend states without pretending the product is working.</span></div></div>
+    </section>
+  </main>
+
+  <section class="app-view" id="app-view" aria-labelledby="app-title" hidden>
+    <div class="app-toolbar">
+      <div><button class="back-button" id="back-home" type="button">← Home</button><span class="app-title" id="app-title">ErrorHunter</span></div>
+      <div class="app-status" id="app-status"><span class="status-dot"></span> Connecting…</div>
+    </div>
+    <div class="iframe-wrap">
+      <div class="iframe-loading" id="iframe-loading"><div class="spinner"></div><strong>Loading ErrorHunter</strong><span>Connecting to the debugging workspace…</span></div>
+      <iframe id="errorhunter" title="BugFalse ErrorHunter application" src="about:blank" loading="eager" allow="clipboard-read; clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="iframe-error" id="iframe-error" hidden><div class="error-symbol">!</div><h2>ErrorHunter could not be reached</h2><p>The application may be starting, unavailable, or temporarily offline.</p><div><button class="button button-primary" id="retry" type="button">Retry</button><a class="button button-ghost" href="https://buglens-r1ow.onrender.com/" target="_blank" rel="noopener noreferrer">Open directly</a></div></div>
+    </div>
+  </section>
+
+  <footer class="footer"><span>© 2026 BugFalse</span><span>ErrorHunter developer workspace</span></footer>
+  <script src="app.js" defer></script>
 </body>
 </html>
