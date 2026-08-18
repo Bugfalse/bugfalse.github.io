@@ -1,0 +1,9 @@
+{
+  "name": "BugFalse ErrorHunter",
+  "short_name": "BugFalse",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "description": "AI-assisted Python debugging workspace."
+}
